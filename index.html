@@ -10,19 +10,26 @@
 
 <body>
     <h1>Прокат настольных игр</h1>
+    <input type="checkbox" id="showHint">
+    <label for="showHint">Только свободные</label>
     <ul id="gameList"></ul>
 
     <label for="gameSelect">Игра</label>
     <select id="gameSelect">
-        <option value="0">Каркассон</option>
+        <!-- <option value="0">Каркассон</option>
         <option value="1">Доббль</option>
-        <option value="2">Шахматы</option>
+        <option value="2">Шахматы</option> -->
     </select>
 
     <label for="borrowerName">Имя посетителя</label>
     <input id="borrowerName" type="text">
     <button id="borrowButton" type="button">Выдать</button>
     <button id="returnButton" type="button">Вернуть</button>
+    <label for="gameName">Название игры</label>
+    <input id="gameName" type="text">
+    <label for="gameNum">Число игроков</label>
+    <input id="gameNum" type="number">
+    <button id="gameButton" type="button">Добавить игру</button>
     <p id="message"></p>
 </body>
 
