@@ -20,6 +20,8 @@ const gameCount = document.getElementById("gameCount")
 const gameSelect2 = document.getElementById("gameSelect2")
 const copyCount = document.getElementById("copyCount")
 const copyButton = document.getElementById("copyButton")
+const copyButton2 = document.getElementById("copyButton2")
+
 
 function renderGames() {
     gameList.innerHTML = '';
@@ -119,7 +121,7 @@ showHint.addEventListener('change', () => {
 });
 
 gameButton.addEventListener('click', () => {
-    const new_obj = { title: "", players: 0, borrower: [], count: 0}
+    const new_obj = { title: "", players: 0, borrower: [], count: 0 }
     if (!gameName.value.trim() == "" && Number(gameNum.value) > 0 && Number(gameCount.value) > 0) {
         new_obj.title = gameName.value;
         new_obj.players = Number(gameNum.value);
@@ -148,5 +150,29 @@ copyButton.addEventListener('click', () => {
     }
     else {
         message.textContent = "Введите число копий, которое хотите добавить"
+    };
+});
+
+copyButton2.addEventListener('click', () => {
+    const select = Number(gameSelect2.value)
+    if (Number(copyCount.value) > 0) {
+        if (games[select].count + games[select].borrower.length >= Number(copyCount.value)) {
+            if (games[select].count >= Number(copyCount.value)) {
+               games[select].count -= Number(copyCount.value)
+                message.textContent = "Копии убраны"
+                copyCount.value = ""
+                renderGames() 
+            }
+            else {
+                message.textContent = "Нет свободных копий в таком количестве"
+            } 
+        }
+        else {
+            message.textContent = "Столько копий нет"
+        }
+
+    }
+    else {
+        message.textContent = "Введите число копий, которое хотите убрать"
     };
 });
