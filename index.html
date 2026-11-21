@@ -6,56 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js" defer></script>
-    <style>
-        * {
-            margin-bottom: 10px;
-            margin-right: 5px;
-        }
-
-        .fff {
-            display: flex;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Прокат настольных игр</h1>
-    <input type="checkbox" id="showHint">
-    <label for="showHint">Только свободные</label>
-    <ul id="gameList"></ul>
-
-    <label for="gameSelect">Игра</label>
-    <select id="gameSelect">
-        <!-- <option value="0">Каркассон</option>
-        <option value="1">Доббль</option>
-        <option value="2">Шахматы</option> -->
-    </select>
-    <div>
-        <div class="fff">
-            <label for="borrowerName">Имя посетителя:</label>
-            <input id="borrowerName" type="text">
-            <button id="borrowButton" type="button">Выдать</button>
-            <button id="returnButton" type="button">Вернуть</button>
-        </div>
-        <div class="fff">
-            <label for="gameName">Название игры:</label>
-            <input id="gameName" type="text">
-            <label for="gameNum">Число игроков:</label>
-            <input id="gameNum" type="number">
-            <label for="gameCount">количество:</label>
-            <input id="gameCount" type="number">
-            <button id="gameButton" type="button">Добавить игру</button>
-        </div>
-        <div class="fff">
-            <label for="gameSelect2">Игра</label>
-            <select id="gameSelect2">
+    <div class="d">
+        <h1>Прокат настольных игр</h1>
+        <hr>
+        <input type="checkbox" id="showHint">
+        <label for="showHint">Только свободные</label>
+        <ul id="gameList"></ul>
+        <div>
+            <div class="fff">
+                <label for="gameSelect">Игра</label>
+                <select id="gameSelect"></select>
+                <label for="borrowerName">Имя посетителя:</label>
+                <input id="borrowerName" type="text">
+                <button id="borrowButton" type="button">Выдать</button>
+                <button id="returnButton" type="button">Вернуть</button>
+            </div>
+            <div class="fff">
+                <label for="gameName">Название игры:</label>
+                <input id="gameName" type="text">
+                <label for="gameNum">Число игроков:</label>
+                <input id="gameNum" type="number">
+                <label for="gameCount">количество:</label>
+                <input id="gameCount" type="number">
+                <button id="gameButton" type="button">Добавить игру</button>
+            </div>
+            <div class="fff">
+                <label for="gameSelect2">Игра</label>
+                <select id="gameSelect2"></select>
                 <label for="copyCount">количество копий:</label>
                 <input id="copyCount" type="number">
                 <button id="copyButton" type="button">Добавить копии</button>
                 <button id="copyButton2" type="button">Убрать копии</button>
+            </div>
         </div>
+        <p id="message"></p>
     </div>
-    <p id="message"></p>
+
 </body>
 
 </html>

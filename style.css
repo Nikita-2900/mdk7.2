@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.fff {
+    display: flex;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f8;
+    padding: 3dvh;
+    flex-direction: column;
+}
+.d {
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    width: 60dvw;
+    min-height: 90dvh;
+    border-radius: 20px;
+
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #000000;
+    margin: 30px 10px;
+}
+#showHint {
+margin-left: 10px;
+}
+#gameList {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px;
+}
+#gameList li {
+    list-style-type: none;
+    margin: 5px 0;
+    font-size: 24px;   
+}
+.fff {
+    margin:  10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    justify-content: center;
+}
+.fff label {
+    font-size: 15px;
+    color: #333;
+    white-space: nowrap;
+}
+.fff input, .fff select {
+    padding: 4px 8px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: #fff;
+}
+button {
+    padding: 4px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    background-color: #f8f9fa;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+input[type="number"] {
+    max-width: 80px;
+    width: 100%;
+}
+
+
